@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailController" customModule="Memo_Custom" customModuleProvider="target">
+            <connections>
+                <outlet property="detailContent" destination="xmb-g4-A8X" id="QeL-az-zEo"/>
+                <outlet property="detailTitle" destination="yxc-Za-IRQ" id="nnp-gL-2Ff"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yxc-Za-IRQ">
+                    <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="dXV-ts-hzf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-hb-vNp">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="메모" id="Uw1-bL-v7b">
+                            <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="QET-i3-SLA">
+                                <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="detailBackBtn:" destination="-1" id="1pM-fC-EzP"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" systemItem="action" id="ZEy-YD-BUq">
+                                <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="detailUploadBtn:" destination="-1" id="q5Q-iX-iii"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3C-r7-eR7">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="g2T-vq-vd4"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="eXh-sc-Y1R"/>
+                        <barButtonItem systemItem="add" id="UQZ-KV-djr">
+                            <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="detailImageBtn:" destination="-1" id="X2n-3V-BGu"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="내용" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xmb-g4-A8X">
+                    <rect key="frame" x="0.0" y="138" width="414" height="674"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="SWl-hb-vNp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2vV-rB-TZO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yxc-Za-IRQ" secondAttribute="trailing" id="9tV-1h-4uq"/>
+                <constraint firstItem="xmb-g4-A8X" firstAttribute="top" secondItem="yxc-Za-IRQ" secondAttribute="bottom" id="Br0-G5-Iha"/>
+                <constraint firstItem="yxc-Za-IRQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="C7m-kU-Zas"/>
+                <constraint firstItem="SWl-hb-vNp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CuG-Vb-1GI"/>
+                <constraint firstItem="u3C-r7-eR7" firstAttribute="top" secondItem="xmb-g4-A8X" secondAttribute="bottom" id="Hi0-Wg-TbB"/>
+                <constraint firstItem="yxc-Za-IRQ" firstAttribute="top" secondItem="SWl-hb-vNp" secondAttribute="bottom" id="Shf-pB-2s0"/>
+                <constraint firstItem="xmb-g4-A8X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ssv-J5-HlC"/>
+                <constraint firstItem="SWl-hb-vNp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TSW-he-fdX"/>
+                <constraint firstItem="u3C-r7-eR7" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Y6H-b5-Bza"/>
+                <constraint firstItem="u3C-r7-eR7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="e7W-gm-PRF"/>
+                <constraint firstItem="SWl-hb-vNp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gbS-ld-NE4"/>
+                <constraint firstItem="u3C-r7-eR7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kG7-BG-OM4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xmb-g4-A8X" secondAttribute="trailing" id="kLP-SQ-CY9"/>
+                <constraint firstItem="SWl-hb-vNp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="t1x-XB-uHf"/>
+                <constraint firstItem="SWl-hb-vNp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uvg-DP-6yd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+    </resources>
+</document>
